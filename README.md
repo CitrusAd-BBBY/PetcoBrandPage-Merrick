@@ -1,1 +1,1 @@
-# PetcoBrandPage-Merrick
+# Petco-Merrick-Gold-Brand-Page
