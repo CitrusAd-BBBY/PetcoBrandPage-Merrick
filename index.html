@@ -557,6 +557,11 @@
             margin-right: auto;
         }
 
+        .MiCS_video_thumb .feature-video iframe{
+            border: 5px solid #ffffff;
+            box-shadow: 0 5px 10px #ddd;
+        }
+
         .MiCS_banner_details {
             max-width: 500px;
             margin: 30px auto;
@@ -632,6 +637,11 @@
         @media screen and (min-width: 1024px) and (max-width: 1279px) {
             .MiCS_product_info {
                 min-height: 85px;
+            }
+
+            .MiCS_video_thumb .feature-video iframe{
+                max-width: 90%;
+                height: 300px;
             }
 
         }
@@ -801,11 +811,21 @@
             }
 
             /**banner*/
+
+            .MiCS_video_thumb .feature-video iframe{
+                max-height: 300px;
+            }
         }
 
         /* table, landscape tablet */
         /* mobile and small devices */
         @media only screen and (max-width: 767px) {
+
+            .MiCS_video_thumb .feature-video iframe{
+                max-width: 100%;
+                height: 300px;
+            }
+
             .MiCS_container {
                 max-width: 100%;
                 padding: 0px 5%;
@@ -1073,6 +1093,14 @@
             }
 
             /**banner e*/
+        }
+
+        @media only screen and (max-width : 480px){
+            
+            .MiCS_video_thumb .feature-video iframe{
+                max-width: 100%;
+                max-height: 250px;
+            }
         }
 
         /* mobile and small devices e*/
@@ -1563,7 +1591,9 @@
                     <!-- banner video -->
 
                     <div class="MiCS_video_thumb">
-                        <img src="img/video_thumbnail_01@2x.png">
+                        <div class="feature-video">
+                            <iframe width="550" height="350" src="https://www.youtube.com/embed/KRGT-3SgAU8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                     <!-- =====banner video===== -->
                     <!-- banner description -->
