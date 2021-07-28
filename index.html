@@ -179,104 +179,84 @@
             -webkit-transition: 2s;
         }
 
-        /* Manual navigation */
-        .navigation-manual {
-            position: absolute;
-            width: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            bottom: 8px;
-            padding: 10px 0 10px 25px;
-            width: 70px;
-            left: 45%;
-        }
+	/* Manual navigation */
+	.navigation-manual{
+		position: absolute;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		bottom: 0;
+		padding: 10px 0 10px 25px;
+		width: 100px;
+		left: 45%;
+	}
 
-        .manual-btn {
-            border: 2px solid #ffffff;
-            padding: 5px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: 1s;
-            -webkit-transition: 1s;
-        }
+	.manual-btn{
+		border : 2px solid #09205c;
+		padding : 5px;
+		border-radius: 10px;
+		cursor: pointer;
+		transition: 1s;
 
-        .manual-btn:not(:last-child) {
-            margin-right: 10px;
-        }
+	}
 
-        .manual-btn:hover {
-            background: #C2B4A5;
-        }
+	.manual-btn:not(:last-child){
+		margin-right: 10px;
+	}
 
-        #radio1:checked~.first {
-            margin-left: 0;
-        }
+	.manual-btn:hover{
+		background : #09205c;
+	}
 
-        #radio2:checked~.first {
-            margin-left: -100%;
-        }
+	#radio1:checked ~ .first{
+		margin-left : 0;
+	}
+	#radio2:checked ~ .first{
+		margin-left : -100%;
+	}
+    #radio3:checked ~ .first{
+		margin-left : -200%;
+	}
 
-        #radio3:checked~.first {
-            margin-left: -200%;
-        }
+	.navigation-auto{
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		bottom: 0;
+		background: rgba(255, 255, 255, 0.8);
+		padding: 10px 0 10px 25px;
+		width: 100px;
+		left: 45%;
+		border-radius: 5px 5px 0 0;
+	}
 
-        .navigation-auto {
-            position: absolute;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            width: 100%;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            bottom: 8px;
-            /*background: rgba(255, 255, 255, 0.8);*/
-            padding: 10px 0 10px 25px;
-            width: 70px;
-            left: 45%;
-            border-radius: 5px 5px 0 0;
-        }
+	.navigation-auto img{
+		width: 16px;
+		position: absolute;
+		margin: 0 0 0 -96px;
+		bottom: 9px;
+	}
 
-        .navigation-auto img {
-            width: 16px;
-            position: absolute;
-            margin: 0 0 0 -75px;
-            bottom: 9px;
-        }
+	.navigation-auto div{
+		border : 2px solid #09205c;
+		padding: 5px;
+		border-radius: 10px;
+		transition: 1s;
+	}
 
-        .navigation-auto div {
-            border: 2px solid #09205c;
-            padding: 5px;
-            border-radius: 10px;
-            transition: 1s;
-            -webkit-transition: 1s;
-        }
+	.navigation-auto div:not(:last-child){
+		margin-right: 10px;
+	}
 
-        .navigation-auto div:not(:last-child) {
-            margin-right: 10px;
-        }
-
-        .navigation-auto .auto-btn1,
-        .navigation-auto .auto-btn2,
-        .navigation-auto .auto-btn3 {
-            background-color: #FFFFFF;
-        }
-
-        #radio1:checked~.navigation-auto .auto-btn1 {
-            background: #C2B4A5;
-        }
-
-        #radio2:checked~.navigation-auto .auto-btn2 {
-            background: #C2B4A5;
-        }
-
-        #radio3:checked~.navigation-auto .auto-btn3 {
-            background: #C2B4A5;
-        }
+	#radio1:checked ~ .navigation-auto .auto-btn1{
+		background: #09205c;
+	}
+	#radio2:checked ~ .navigation-auto .auto-btn2{
+		background: #09205c;
+	}
+    #radio3:checked ~ .navigation-auto .auto-btn3{
+		background: #09205c;
+	}
 
         /****slider styles****/
         /**** section head subhead ****/
@@ -923,7 +903,7 @@
             }
 
             .navigation-auto {
-                display: none;
+                left: 37%;
             }
 
             .navigation-manual {
@@ -1165,7 +1145,7 @@
                     </div>
                     <!-- Auto navigation -->
                     <div class="navigation-auto">
-                        <!-- <img src="images/nav-icon.png" /> -->
+                        <img src="img/nav-icon.png" />
                         <div class="auto-btn1"></div>
                         <div class="auto-btn2"></div>
                         <div class="auto-btn3"></div>
@@ -2152,7 +2132,7 @@
             if (counter > 3) {
                 counter = 1;
             }
-        }, 500000);
+        }, 5000);
 
 
 
